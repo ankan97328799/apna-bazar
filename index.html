@@ -2,28 +2,95 @@
 <html>
 <head>
   <title>Apna Bazar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #131921;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar h1 {
+      margin: 0;
+    }
+
+    .search-box input {
+      padding: 7px;
+      width: 300px;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .card button {
+      background: orange;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: darkorange;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Welcome to Apna Bazar 🚀</h1>
+  <div class="navbar">
+    <h1>🛒 Apna Bazar</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Search products...">
+    </div>
+  </div>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+  <div class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/150">
+      <h3>Product 1</h3>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
 
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "apna-bazar-3f217.firebaseapp.com",
-      projectId: "apna-bazar-3f217",
-      storageBucket: "apna-bazar-3f217.appspot.com",
-      messagingSenderId: "136399702833",
-      appId: "1:136399702833:web:xxxxxx",
-      measurementId: "G-XXXXXXX"
-    };
+    <div class="card">
+      <img src="https://via.placeholder.com/150">
+      <h3>Product 2</h3>
+      <p>₹799</p>
+      <button>Add to Cart</button>
+    </div>
 
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
+    <div class="card">
+      <img src="https://via.placeholder.com/150">
+      <h3>Product 3</h3>
+      <p>₹999</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
 
 </body>
 </html>
